@@ -1,0 +1,41 @@
+GET http://localhost:3001/api/blogs
+
+###
+GET http://localhost:3001/api/blogs/62956093b311c07f89b01858
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyIiwiaWQiOiI2MjdmMjZjYjRmYzIyY2JlYmQ4NmNjYzgiLCJpYXQiOjE2NjEzOTEzNDV9.0_kkRbKITBN7Hc_GEVZXdlmpz6oI5qOQFD0aVyRvgSc
+
+{   
+    "title":"blogtestitle",
+    "url":"www.blog.com",
+    "author":"nombre_autor"
+}
+
+###
+POST http://localhost:3001/api/blogs/62956093b311c07f89b01858/comments
+Content-Type: application/json
+
+{   
+    "comment":"comentario de prueba2!!"
+}
+
+###
+DELETE http://localhost:3001/api/blogs/62812f73293ec7e19cc9f884
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyIiwiaWQiOiI2MjdmMjZjYjRmYzIyY2JlYmQ4NmNjYzgiLCJpYXQiOjE2NTI1NTU1NDN9.Xr6kuRXZ61RFy06Zf2Uo1f4SEEs5IdeJFayBKeYKL5I
+
+
+###
+PUT http://localhost:3001/api/blogs/62956093b311c07f89b01858
+Content-Type: application/json
+
+{   
+"title": "blog4EDITADO",
+  "author": "asdñksadl",
+  "url": "iodjweoriujweroj",
+  "likes": 82,
+  "user": "627f26cb4fc22cbebd86ccc8",
+  "id": "62956093b311c07f89b01858"
+}
